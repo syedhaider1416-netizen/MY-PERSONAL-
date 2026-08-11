@@ -21,6 +21,36 @@ export default async function OpengraphImage() {
             "radial-gradient(circle at 78% 30%, rgba(41,200,176,0.18), transparent 55%)",
         }}
       >
+        <svg
+          width={44}
+          height={44}
+          viewBox="0 0 40 40"
+          xmlns="http://www.w3.org/2000/svg"
+          style={{ marginBottom: 32 }}
+        >
+          <path
+            d="M8 12 H18 V20"
+            fill="none"
+            stroke="#8ca3b5"
+            strokeWidth="2"
+            strokeLinecap="square"
+          />
+          <path
+            d="M8 28 H18 V20"
+            fill="none"
+            stroke="#8ca3b5"
+            strokeWidth="2"
+            strokeLinecap="square"
+          />
+          <path
+            d="M8 20 H32"
+            fill="none"
+            stroke="#29c8b0"
+            strokeWidth="2"
+            strokeLinecap="square"
+          />
+          <rect x="16.5" y="18.5" width="3" height="3" fill="#29c8b0" />
+        </svg>
         <div
           style={{
             display: "flex",

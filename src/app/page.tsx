@@ -1,5 +1,6 @@
 import { IndexRail } from "@/components/IndexRail";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { BrandMark } from "@/components/BrandMark";
 import { Hero } from "@/sections/Hero";
 import { ProofStrip } from "@/sections/ProofStrip";
 import { VideoReel } from "@/sections/VideoReel";
@@ -12,6 +13,7 @@ import { Footer } from "@/sections/Footer";
 export default function Home() {
   return (
     <>
+      <BrandMark />
       <IndexRail />
       <FloatingWhatsApp />
       <main>
