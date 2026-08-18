@@ -30,13 +30,12 @@ function getServerSnapshot() {
 }
 
 /**
- * Live aurora, scoped to the section it's placed in (the hero).
+ * Live aurora behind the entire page.
  *
- * Deliberately *not* page-wide: at full strength the field pushes muted body
- * text under 3:1 contrast, and veiling it enough to fix that dims it back to
- * invisible. Scoping it to the hero — which has room and only large, bright
- * text — keeps it vivid where it's seen and keeps dense content readable.
- * The rest of the page gets the calm CSS ambient instead.
+ * Fixed to the viewport rather than scoped to a section, so it covers every
+ * screen as you scroll instead of ending below the hero. Readability is
+ * handled by the veil above the shader plus opaque-ish content surfaces —
+ * not by dimming the field, which only makes it invisible.
  *
  * Falls back to the CSS orbs when WebGL is unavailable or motion is reduced,
  * the same split NodeGraph uses.
@@ -48,7 +47,7 @@ export function LiveBackground() {
   const canUseShader = hasWebGL && !reducedMotion;
 
   return (
-    <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+    <div className="ambient" aria-hidden="true">
       <AmbientBackground embedded />
       {canUseShader ? (
         <div className="ambient-shader">
@@ -56,6 +55,7 @@ export function LiveBackground() {
         </div>
       ) : null}
       <div className="ambient-grid" />
+      <div className="ambient-veil" />
       <div className="ambient-grain" />
     </div>
   );

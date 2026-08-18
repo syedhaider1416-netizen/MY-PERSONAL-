@@ -36,7 +36,7 @@ export function ConsoleWork() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onMouseMove={trackSpotlight}
-                className="group relative flex flex-col overflow-hidden rounded-md border border-line bg-raised/40 p-5 backdrop-blur-sm transition-colors duration-300 hover:border-accent-dim md:p-6"
+                className="group relative flex flex-col overflow-hidden rounded-md border border-line bg-raised/85 p-5 backdrop-blur-md transition-colors duration-300 hover:border-accent-dim md:p-6"
               >
                 <span aria-hidden="true" className="spotlight pointer-events-none" />
                 <div className="relative flex items-center justify-between gap-4">

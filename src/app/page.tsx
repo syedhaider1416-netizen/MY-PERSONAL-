@@ -1,6 +1,7 @@
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { ConsoleNav } from "@/components/explore/ConsoleNav";
 import { ScrollProgress } from "@/components/explore/ScrollProgress";
+import { LiveBackground } from "@/components/explore/LiveBackground";
 import { ConsoleHero } from "@/sections/console/ConsoleHero";
 import { ConsoleBento } from "@/sections/console/ConsoleBento";
 import { ConsoleWork } from "@/sections/console/ConsoleWork";
@@ -11,6 +12,7 @@ import { Footer } from "@/sections/Footer";
 export default function Home() {
   return (
     <>
+      <LiveBackground />
       <ScrollProgress />
       <ConsoleNav />
       <FloatingWhatsApp />

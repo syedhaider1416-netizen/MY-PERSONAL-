@@ -2,7 +2,6 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { Counter } from "@/components/explore/Counter";
-import { LiveBackground } from "@/components/explore/LiveBackground";
 import { trackSpotlight } from "@/components/explore/spotlight";
 import { hero, site, stats } from "@/content";
 
@@ -20,7 +19,6 @@ export function ConsoleHero() {
 
   return (
     <section id="hero" className="relative overflow-hidden border-b border-line pt-28">
-      <LiveBackground />
       {/* No node graph here: the live aurora is the hero's background, and a
           second WebGL context just to overlay it costs more than it adds.
           Only a left-side scrim, to hold text contrast over the brightest
@@ -84,7 +82,7 @@ export function ConsoleHero() {
           {stats.map((stat) => (
             <div
               key={stat.label}
-              className="group relative overflow-hidden bg-base/70 px-5 py-6 backdrop-blur-sm"
+              className="group relative overflow-hidden bg-base/85 px-5 py-6 backdrop-blur-md"
               onMouseMove={trackSpotlight}
             >
               <span aria-hidden="true" className="spotlight pointer-events-none" />

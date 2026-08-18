@@ -38,7 +38,7 @@ export function Contact() {
         <Reveal delay={0.16} className="mt-4 grid gap-4 sm:grid-cols-3">
           <a
             href={contact.email.href}
-            className="flex flex-col gap-1 rounded-sm border border-line p-5 transition-colors duration-200 hover:border-accent-dim"
+            className="flex flex-col gap-1 rounded-sm border border-line bg-base/80 p-5 backdrop-blur-md transition-colors duration-200 hover:border-accent-dim"
           >
             <span className="font-mono text-2xs tracking-wide text-muted">
               {contact.email.label}
@@ -49,7 +49,7 @@ export function Contact() {
             href={contact.linkedin.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col gap-1 rounded-sm border border-line p-5 transition-colors duration-200 hover:border-accent-dim"
+            className="flex flex-col gap-1 rounded-sm border border-line bg-base/80 p-5 backdrop-blur-md transition-colors duration-200 hover:border-accent-dim"
           >
             <span className="font-mono text-2xs tracking-wide text-muted">
               {contact.linkedin.label}
@@ -60,7 +60,7 @@ export function Contact() {
             href={contact.instagram.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col gap-1 rounded-sm border border-line p-5 transition-colors duration-200 hover:border-accent-dim"
+            className="flex flex-col gap-1 rounded-sm border border-line bg-base/80 p-5 backdrop-blur-md transition-colors duration-200 hover:border-accent-dim"
           >
             <span className="font-mono text-2xs tracking-wide text-muted">
               {contact.instagram.label}

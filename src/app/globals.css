@@ -174,14 +174,16 @@ body {
   -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black, transparent 78%);
 }
 
-/* keeps text contrast intact over the brightest part of the field */
+/* Keeps text contrast intact over the brightest part of the field.
+   Lightest at the top, where the hero has room to show the aurora off, and
+   heavier further down where the content is dense and mostly muted text. */
 .ambient-veil {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(11, 26, 46, 0.22),
-    rgba(11, 26, 46, 0.55)
+    rgba(11, 26, 46, 0.30),
+    rgba(11, 26, 46, 0.62)
   );
 }
 
@@ -248,12 +250,16 @@ body {
 
 /* animated sheen that travels across the accent words once on reveal
    and again on hover — reads as polish, not decoration */
+/* Light-based, NOT accent-based: the aurora behind this text peaks at a teal
+   very close to --accent, so a teal gradient here disappears into it. Pale
+   tints keep the headline readable over any part of the field. */
 .shimmer {
   background: linear-gradient(
     100deg,
-    var(--accent) 20%,
-    #7df3de 42%,
-    var(--accent) 62%
+    var(--text-primary) 18%,
+    #ffffff 38%,
+    #9ff0e2 52%,
+    var(--text-primary) 70%
   );
   background-size: 220% 100%;
   -webkit-background-clip: text;

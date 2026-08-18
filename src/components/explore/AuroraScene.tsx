@@ -166,11 +166,10 @@ export function AuroraScene() {
     }
 
     function handleResize() {
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      uniforms.u_resolution.value.set(
-        window.innerWidth * renderer.getPixelRatio(),
-        window.innerHeight * renderer.getPixelRatio()
-      );
+      const { w, h } = sizeOf();
+      const dpr = renderer.getPixelRatio();
+      renderer.setSize(w, h);
+      uniforms.u_resolution.value.set(w * dpr, h * dpr);
       if (!running) renderFrame();
     }
 
@@ -185,6 +184,12 @@ export function AuroraScene() {
       }
     }
 
+    // The container's height is not final at mount — fonts load, content
+    // reflows, the page grows. A window resize listener alone misses all of
+    // that and leaves the canvas stuck at its first measured size.
+    const observer = new ResizeObserver(handleResize);
+    observer.observe(mount);
+
     window.addEventListener("resize", handleResize);
     document.addEventListener("visibilitychange", handleVisibility);
     loop();
@@ -192,6 +197,7 @@ export function AuroraScene() {
     return () => {
       running = false;
       cancelAnimationFrame(frame);
+      observer.disconnect();
       window.removeEventListener("resize", handleResize);
       document.removeEventListener("visibilitychange", handleVisibility);
       geometry.dispose();

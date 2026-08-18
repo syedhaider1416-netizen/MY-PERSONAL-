@@ -36,7 +36,7 @@ export function ConsoleBento() {
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.4, delay: i * 0.05, ease: [0.22, 1, 0.36, 1] }}
               onMouseMove={trackSpotlight}
-              className={`group relative overflow-hidden rounded-md border border-line bg-base/70 p-5 backdrop-blur-sm transition-colors duration-300 hover:border-accent-dim md:p-6 ${span[i] ?? ""}`}
+              className={`group relative overflow-hidden rounded-md border border-line bg-base/85 p-5 backdrop-blur-md transition-colors duration-300 hover:border-accent-dim md:p-6 ${span[i] ?? ""}`}
             >
               <span aria-hidden="true" className="spotlight pointer-events-none" />
               <span
