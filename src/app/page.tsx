@@ -1,28 +1,24 @@
-import { IndexRail } from "@/components/IndexRail";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
-import { BrandMark } from "@/components/BrandMark";
-import { Hero } from "@/sections/Hero";
+import { ConsoleNav } from "@/components/explore/ConsoleNav";
+import { ScrollProgress } from "@/components/explore/ScrollProgress";
+import { ConsoleHero } from "@/sections/console/ConsoleHero";
+import { ConsoleBento } from "@/sections/console/ConsoleBento";
+import { ConsoleWork } from "@/sections/console/ConsoleWork";
 import { ProofStrip } from "@/sections/ProofStrip";
-import { VideoReel } from "@/sections/VideoReel";
-import { Services } from "@/sections/Services";
-import { Work } from "@/sections/Work";
-import { Process } from "@/sections/Process";
 import { Contact } from "@/sections/Contact";
 import { Footer } from "@/sections/Footer";
 
 export default function Home() {
   return (
     <>
-      <BrandMark />
-      <IndexRail />
+      <ScrollProgress />
+      <ConsoleNav />
       <FloatingWhatsApp />
       <main>
-        <Hero />
+        <ConsoleHero />
         <ProofStrip />
-        <VideoReel />
-        <Services />
-        <Work />
-        <Process />
+        <ConsoleBento />
+        <ConsoleWork />
         <Contact />
       </main>
       <Footer />

@@ -10,6 +10,8 @@ export const site = {
   whatsapp: "+92 314 1616088",
   whatsappHref: "https://wa.me/923141616088",
   linkedin: "https://www.linkedin.com/in/syed-haider-54bb91423/",
+  instagram: "https://www.instagram.com/aria.ai0/",
+  instagramHandle: "@aria.ai0",
   url: "https://syedshabihhaider.com",
   description:
     "I build the AI system and the AI content that fills it — voice agents, n8n workflows, Claude agents, full apps, and the AI video ads that drive traffic in. One person, whole pipeline.",
@@ -29,6 +31,13 @@ export const proof = [
   "n8n automation",
   "Claude Skills & agents",
   "AI video & UGC ads",
+];
+
+export const stats = [
+  { value: 2, suffix: "", label: "Live SaaS products shipped" },
+  { value: 5, suffix: "", label: "Capabilities, one pipeline" },
+  { value: 24, suffix: "/7", label: "Voice agents answering calls" },
+  { value: 1, suffix: "", label: "Person, end to end" },
 ];
 
 export const services = [
@@ -108,12 +117,27 @@ export const work = [
 ];
 
 export const videoReel = {
-  title: "Easy Vitamins — Bone Support Formula",
-  kind: "UGC Video Ad",
+  title: "AI video & UGC ads",
   description:
-    "A supplement-vertical UGC ad produced end to end: hook, script, AI talent and voice, edit, captions, delivered in paid-social format. Direct-response structure.",
-  videoSrc: "/work/easy-vitamins-ugc.mp4",
-  poster: "/work/easy-vitamins-poster.jpg",
+    "Ads produced end to end: hook, script, AI talent and voice, edit, captions, delivered in paid-social format. Direct-response structure.",
+  items: [
+    {
+      id: "easy-vitamins",
+      title: "Easy Vitamins — Bone Support Formula",
+      kind: "UGC Video Ad · 9:16 paid social",
+      videoSrc: "/work/easy-vitamins-ugc.mp4",
+      poster: "/work/easy-vitamins-poster.jpg",
+      orientation: "portrait" as const,
+    },
+    {
+      id: "ai-video-ad-02",
+      title: "AI Video Ad — Cinematic Spot",
+      kind: "AI Video Ad · 16:9 cinematic",
+      videoSrc: "/work/ai-video-ad-02.mp4",
+      poster: "",
+      orientation: "landscape" as const,
+    },
+  ],
 };
 
 export const process = [
@@ -145,4 +169,5 @@ export const contact = {
   whatsapp: { label: "WhatsApp", value: "+92 314 1616088", href: "https://wa.me/923141616088" },
   email: { label: "Email", value: "syedhaider1416@gmail.com", href: "mailto:syedhaider1416@gmail.com" },
   linkedin: { label: "LinkedIn", value: "syed-haider", href: "https://www.linkedin.com/in/syed-haider-54bb91423/" },
+  instagram: { label: "Instagram — AI creator channel", value: "@aria.ai0", href: "https://www.instagram.com/aria.ai0/" },
 };

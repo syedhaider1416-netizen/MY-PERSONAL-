@@ -35,7 +35,7 @@ export function Contact() {
           </a>
         </Reveal>
 
-        <Reveal delay={0.16} className="mt-4 grid gap-4 sm:grid-cols-2">
+        <Reveal delay={0.16} className="mt-4 grid gap-4 sm:grid-cols-3">
           <a
             href={contact.email.href}
             className="flex flex-col gap-1 rounded-sm border border-line p-5 transition-colors duration-200 hover:border-accent-dim"
@@ -55,6 +55,17 @@ export function Contact() {
               {contact.linkedin.label}
             </span>
             <span className="text-base text-primary">{contact.linkedin.value}</span>
+          </a>
+          <a
+            href={contact.instagram.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col gap-1 rounded-sm border border-line p-5 transition-colors duration-200 hover:border-accent-dim"
+          >
+            <span className="font-mono text-2xs tracking-wide text-muted">
+              {contact.instagram.label}
+            </span>
+            <span className="text-base text-primary">{contact.instagram.value}</span>
           </a>
         </Reveal>
       </div>

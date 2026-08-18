@@ -9,7 +9,17 @@ export function Footer() {
         <span>
           {site.name} — {site.title}
         </span>
-        <span>&copy; {year}</span>
+        <span className="flex items-center gap-4">
+          <a
+            href={site.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors duration-200 hover:text-accent"
+          >
+            {site.instagramHandle}
+          </a>
+          <span>&copy; {year}</span>
+        </span>
       </div>
     </footer>
   );
