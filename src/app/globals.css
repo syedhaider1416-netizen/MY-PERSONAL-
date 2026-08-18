@@ -12,6 +12,12 @@
 }
 
 @theme inline {
+  /* WARNING: --color-base and --text-base below both generate a `text-base`
+     utility, and the COLOR wins. Writing `text-base` (or `md:text-base`) to
+     mean "1rem font size" silently paints the text in the dark background
+     colour, i.e. invisible. Use `text-[1rem]` for that size instead.
+     Colour utilities from this token — bg-base, from-base, border-base — are
+     unaffected and safe. */
   --color-base: var(--bg-base);
   --color-raised: var(--bg-raised);
   --color-inset: var(--bg-inset);

@@ -39,7 +39,7 @@ export function Work() {
                   <h3 className="font-display text-2xl font-semibold text-primary md:text-3xl">
                     {project.name}
                   </h3>
-                  <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted md:text-base">
+                  <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted md:text-[1rem]">
                     {project.description}
                   </p>
                 </div>

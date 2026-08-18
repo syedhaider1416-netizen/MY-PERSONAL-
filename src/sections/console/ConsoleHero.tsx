@@ -53,7 +53,7 @@ export function ConsoleHero() {
 
         <motion.p
           variants={item}
-          className="mt-5 max-w-2xl text-sm leading-relaxed text-muted md:text-base"
+          className="mt-5 max-w-2xl text-sm leading-relaxed text-primary md:text-[1rem]"
         >
           {hero.sub}
         </motion.p>
