@@ -12,7 +12,9 @@ export const site = {
   linkedin: "https://www.linkedin.com/in/syed-haider-54bb91423/",
   instagram: "https://www.instagram.com/aria.ai0/",
   instagramHandle: "@aria.ai0",
-  url: "https://syedshabihhaider.com",
+  // Live Vercel deployment. Feeds metadataBase, the OG/Twitter card URLs and
+  // the sitemap — swap this for the custom domain once it's pointed at Vercel.
+  url: "https://my-personal-tawny.vercel.app",
   description:
     "I build the AI system and the AI content that fills it — voice agents, n8n workflows, Claude agents, full apps, and the AI video ads that drive traffic in. One person, whole pipeline.",
 };
